@@ -137,37 +137,6 @@ article{
     padding: 2.5rem 5rem;
 }
 
-.comunicado{
-    display: flex;
-    width: 100%;
-    padding: 0;
-    height: auto;
-    max-height: 75vh;
-}
-
-.comunicado-content{
-    width: 50%;
-    padding: 0 1.5rem;
-    text-align: justify;
-    align-items: center;
-}
-
-.comunicado-content-img{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 1.5rem;
-    height: 100%;
-    width: 100%;
-}
-
-.comunicado-content-img img {
-    max-height: 75vh;
-    max-width: calc(50vw - 3rem - 5rem);
-    height: auto;
-    width: auto;
-}
-
 button{
     border: 1px solid white;
     border-radius: 5px;
@@ -208,7 +177,7 @@ button:hover{
     padding: 7px;
 }
 
-#article-comunicados-2{
+#article-anuncios-2{
     background: black;
     color: white;
     min-height: auto;
@@ -521,37 +490,6 @@ button:hover{
 
     .first-article-img{
         width: 80%;
-    }
-
-    .comunicado{
-        display: block;
-        width: 100%;
-        padding: 0;
-        height: auto;
-        max-height: none;
-    }
-
-    .comunicado-content{
-        width: 100%;
-        padding: 0;
-        text-align: justify;
-        align-items: normal ;
-    }
-
-    .comunicado-content-img{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        width: 100%;
-        padding: 0.5rem 0;
-    }
-
-    .comunicado-content-img img {
-        max-width: 100%;
-        max-height: none;
-        height: auto;
-        width: auto;
     }
 
     .buttons-container{
