@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="gl">
 <head>
-    <title>2024 / GALERÍA / ESCUDERÍA PONTE CALDELAS</title>
+    <title>JOAQUÍN SOLLA VÁZQUEZ / 2023 / GALERÍA / ESCUDERÍA PONTE CALDELAS</title>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,7 +22,6 @@
     <script type='text/javascript' src='../../scripts/no_context_menu.js'></script>
     <script type='text/javascript' src='../../scripts/navigation.js'></script>
 
-    <script type="text/javascript" src="../../scripts/progress_bar.js"></script>
 </head>
 
 <body>
@@ -84,52 +83,103 @@
     </article>
 
     <article id="article-galeria-2">
-        <h1><a href="../../galeria.html" style="color: white"><i class="fa fa-angle-double-left"></i></a>&nbsp;GALERÍA / 2024</h1>
+        <h1><a href="../2023/fotografos.html" style="color: white"><i class="fa fa-angle-double-left"></i></a>&nbsp;GALERÍA / 2023 / JOAQUÍN SOLLA VÁZQUEZ&nbsp;<a style="color: white; font-size: 2.25rem" target="_blank" href="https://www.instagram.com/joaquin.solla/"><i class="fa fa-instagram"></i></a></h1>
         <hr style="margin-bottom: 1rem">
-        <div class="container-with-progressbar">
-            <div class="progress-bar">
-                <div class="progress-indicator"></div>
-            </div>
-            <div style="width: 100%" class="flex-to-block">
-                <div class="flex-item-25">
-                    <img src="../../assets/galeria/carteles/cartel-2024.webp" style="width: 100%; height: auto; margin-top: 1rem" alt="">
-                </div>
-                <div class="flex-item-75 margin-left-to-top">
-                    <script>
-                        function displayList(self, id) {
-                            var element = document.getElementById(id);
-                            var icon = self.querySelector('.fa');
 
-                            if (element.style.display === "none" || element.style.display === "") {
-                                element.style.display = "block";
-                                icon.style.transform = "none";
-                            } else {
-                                element.style.display = "none";
-                                icon.style.transform = "rotate(-90deg)";
-                            }
-                        }
-                    </script>
-                    <h2 style="margin-top: 0.5rem">Lista de fotógrafos</h2>
+        <h3>14 Fotos</h3>
+        <!-- PROGRESS BAR NOT COMPATIBLE -->
 
-                    <ul style="display: block">
-
-                        <li class="list-li">
-                            <p style="color: lightgrey"><i class="fa fa-clock-o" aria-hidden="true" style="font-size: 1rem"></i>&nbsp;&nbsp;Fotos próximamente...</p>
-                        </li>
-
-                        <!-- PHOTOGRAPHER EXAMPLE
-                        <li class="list-li">
-                            <a href="../2023/joaquin-solla-vazquez.html" target="_self">
-                                <h4 class="list-header animated-scale">Fotografo 1&nbsp;&nbsp;<i class="fa fa-angle-double-right" style="color: #bce519"></i></h4>
-                            </a>
-                        </li>
-                        -->
-                    </ul>
-                </div>
-            </div>
+        <div id="gallery-wrap" class="gallery-wrap"></div>
+        <div id="modal" class="modal">
+            <span class="close" onclick="document.getElementById('modal').style.display='none'">&#10005;</span>
+            <span class="modal-arrow modal-arrow-left"><i class="fa fa-angle-left"></i></span>
+            <span class="modal-arrow modal-arrow-right"><i class="fa fa-angle-right"></i></span>
+            <img class="modal-content" id="modalImage" alt="" src="" loading="eager">
+            <div id="caption"></div>
         </div>
+        <script>
+            const originalRoute = "../../assets/galeria/2023/joaquin-solla-vazquez/";
+            const totalImages = 14;
+            let originalImages = [];
 
+            for (let i = 1; i <= totalImages; i++) {
+                let imageName = `joaquin-solla-23 (${i}).webp`;
+                originalImages.push(originalRoute + imageName);
+            }
 
+            let thumbnailImages = originalImages;
+
+            const galleryWrap = document.getElementById("gallery-wrap");
+
+            for (let i = 0; i < thumbnailImages.length; i++) {
+
+                let child = document.createElement("div");
+
+                if (thumbnailImages[i] !== "keep"){
+                    child = document.createElement("img");
+                    child.dataset.src = thumbnailImages[i];
+                    child.className = "gallery-wrap-photo";
+                    child.alt = "";
+                    child.loading = "lazy";
+
+                    child.onclick = function() {
+                        openModal(i);
+                    };
+                } else {
+                    child.style.height = "0";
+                    child.style.width = "33%";
+                    child.style.flex = "0 0 33%";
+                    child.style.paddingLeft = "10px";
+                    child.style.paddingRight = "10px";
+                    child.style.boxSizing = "border-box";
+                }
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            const lazyImage = entry.target;
+                            lazyImage.src = lazyImage.dataset.src;
+                            lazyImage.removeAttribute("data-src");
+                            observer.unobserve(lazyImage);
+                        }
+                    });
+                });
+
+                galleryWrap.appendChild(child);
+                observer.observe(child);
+            }
+
+            const modal = document.getElementById("modal");
+            let span = document.getElementsByClassName("close")[0];
+            span.onclick = function() {
+                modal.style.display = "none";
+            };
+
+            function openModal(index) {
+                const modal = document.getElementById("modal");
+                const modalImg = document.getElementById("modalImage");
+                const captionText = document.getElementById("caption");
+
+                modal.style.display = "block";
+                modalImg.src = originalImages[index];
+                captionText.innerHTML = ""; // Agrega texto de la imagen si es necesario
+
+                // ARROWS MANAGEMENT
+                const modalArrowLeft = document.querySelector(".modal-arrow-left");
+                const modalArrowRight = document.querySelector(".modal-arrow-right");
+
+                modalArrowLeft.addEventListener("click", function () {
+                    index = (index - 1 + originalImages.length) % originalImages.length;
+                    modalImg.src = originalImages[index];
+                });
+
+                modalArrowRight.addEventListener("click", function () {
+                    index = (index + 1) % originalImages.length;
+                    modalImg.src = originalImages[index];
+                });
+            }
+
+        </script>
     </article>
 
 </div>
