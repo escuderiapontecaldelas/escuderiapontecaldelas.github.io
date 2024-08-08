@@ -86,6 +86,7 @@
         <h1><a href="../2023/fotografos.html" style="color: white"><i class="fa fa-angle-double-left"></i></a>&nbsp;GALERÍA / 2023 / JOAQUÍN SOLLA&nbsp;<a style="color: white; font-size: 2.25rem" target="_blank" href="https://www.instagram.com/joaquin.solla/"><i class="fa fa-instagram"></i></a></h1>
         <hr style="margin-bottom: 1rem">
 
+        <h3>14 Fotos</h3>
         <!-- PROGRESS BAR NOT COMPATIBLE -->
 
         <div id="gallery-wrap" class="gallery-wrap"></div>
@@ -97,24 +98,14 @@
             <div id="caption"></div>
         </div>
         <script>
-            const originalRoute = "../../assets/galeria/2024/joaquin-solla/";
+            const originalRoute = "../../assets/galeria/2023/joaquin-solla/";
+            const totalImages = 14;
+            let originalImages = [];
 
-            let originalImages = [
-                originalRoute + "joaquin-solla-23 (1).webp",
-                originalRoute + "joaquin-solla-23 (2).webp",
-                originalRoute + "joaquin-solla-23 (3).webp",
-                originalRoute + "joaquin-solla-23 (4).webp",
-                originalRoute + "joaquin-solla-23 (5).webp",
-                originalRoute + "joaquin-solla-23 (6).webp",
-                originalRoute + "joaquin-solla-23 (7).webp",
-                originalRoute + "joaquin-solla-23 (8).webp",
-                originalRoute + "joaquin-solla-23 (9).webp",
-                originalRoute + "joaquin-solla-23 (10).webp",
-                originalRoute + "joaquin-solla-23 (11).webp",
-                originalRoute + "joaquin-solla-23 (12).webp",
-                originalRoute + "joaquin-solla-23 (13).webp",
-                originalRoute + "joaquin-solla-23 (14).webp",
-            ];
+            for (let i = 1; i <= totalImages; i++) {
+                let imageName = `joaquin-solla-23 (${i}).webp`;
+                originalImages.push(originalRoute + imageName);
+            }
 
             let thumbnailImages = originalImages;
 
