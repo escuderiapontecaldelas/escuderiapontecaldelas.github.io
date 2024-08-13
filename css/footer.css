@@ -18,8 +18,23 @@ footer{
     font-weight: 200;
 }
 
+.footer-content-2{
+    padding: 2.5rem 5rem;
+    color: grey;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 200;
+    background-color: #0c0c0c;
+
+}
+
 .footer-content a {
     color: grey;
+}
+
+.footer-institution-img{
+    width: auto;
+    height: 6vh;
+    padding-right: 2rem;
 }
 
 
@@ -31,6 +46,15 @@ footer{
 
     div footer{
         display: block;
+    }
+
+    .footer-institution-img{
+        padding-bottom: 2rem;
+        padding-right: 0;
+    }
+
+    .no-padding-bottom{
+        padding-bottom: 0;
     }
 
 }
