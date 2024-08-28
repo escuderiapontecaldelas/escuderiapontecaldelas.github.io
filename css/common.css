@@ -520,9 +520,15 @@ button:hover{
         width: 100%;
     }
 
+    .flexbox-merch{
+        display: block;
+        flex-wrap: wrap;
+    }
+
     .flexbox-merch-item {
-        width: calc(50% - 1rem);
+        width: calc(100%);
         max-width: none;
+        margin-bottom: 1rem;
     }
 
     .flexbox-gallery-item {
