@@ -88,69 +88,78 @@
     <article id="article-anuncios-2">
         <h1>TABOLEIRO DE ANUNCIOS</h1>
         <hr style="margin-bottom: 1rem">
-        <div class="container-with-progressbar">
-            <div class="progress-bar">
-                <div class="progress-indicator"></div>
-            </div>
-            <div style="width: 100%">
-                <script>
-                    function displayList(self, id) {
-                        var element = document.getElementById(id);
-                        var icon = self.querySelector('.fa');
+        <div class="flex-to-block">
 
-                        if (element.style.display === "none" || element.style.display === "") {
-                            element.style.display = "block";
-                            icon.style.transform = "none";
-                        } else {
-                            element.style.display = "none";
-                            icon.style.transform = "rotate(-90deg)";
+            <div class="container-with-progressbar flex-item-50">
+                <div class="progress-bar">
+                    <div class="progress-indicator"></div>
+                </div>
+                <div style="width: 100%">
+                    <script>
+                        function displayList(self, id) {
+                            var element = document.getElementById(id);
+                            var icon = self.querySelector('.fa');
+
+                            if (element.style.display === "none" || element.style.display === "") {
+                                element.style.display = "block";
+                                icon.style.transform = "none";
+                            } else {
+                                element.style.display = "none";
+                                icon.style.transform = "rotate(-90deg)";
+                            }
                         }
-                    }
-                </script>
+                    </script>
 
-                <h2><img src="assets/icons_and_logos/sportity.webp" style="height: 1.33rem; width: auto" alt="">&nbsp;Código Sportity:</h2>
-                <ul id="sportity" style="display: block; margin-bottom: 2rem">
-                    <li class="list-li"><a href="https://webapp.sportity.com/channel/PONTECALDELAS24" target="_blank"><i class="fa fa-external-link"></i>&nbsp;&nbsp;PONTECALDELAS24</a></li>
-                </ul>
+                    <h2><img src="assets/icons_and_logos/sportity.webp" style="height: 1.33rem; width: auto" alt="">&nbsp;Código Sportity:</h2>
+                    <ul id="sportity" style="display: block; margin-bottom: 2rem">
+                        <li class="list-li"><a href="https://webapp.sportity.com/channel/PONTECALDELAS24" target="_blank"><i class="fa fa-external-link"></i>&nbsp;&nbsp;PONTECALDELAS24</a></li>
+                    </ul>
 
-                <h4 class="list-header" onclick="displayList(this, 'mapas-horarios')">Mapas e horarios&nbsp;&nbsp;<i class="fa fa-angle-down" style="transition: transform 0.3s; color: #bce519"></i></h4>
-                <ul id="mapas-horarios" style="display: block;">
-                    <li class="list-li"><a href="assets/anuncios/2024/mapa_parking.jpg" target="_blank"><i class="fa fa-file-image-o"></i>&nbsp;&nbsp;Mapa parking</a></li>
-                    <li class="list-li"><a href="assets/anuncios/2024/mapa_colaboradores.jpg" target="_blank"><i class="fa fa-file-image-o"></i>&nbsp;&nbsp;Mapa locais colaboradores</a></li>
-                    <!--<li class="list-li"><a href="XXXXX" target="_blank"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Mapa</a></li>-->
-                    <!--<li class="list-li"><a href="XXXXX" target="_blank"><i class="fa fa-file-pdf-o"></i>&nbsp;&nbsp;Horarios</a></li>-->
-                </ul>
+                    <h4 class="list-header" onclick="displayList(this, 'mapas-horarios')">Mapas e horarios&nbsp;&nbsp;<i class="fa fa-angle-down" style="transition: transform 0.3s; color: #bce519"></i></h4>
+                    <ul id="mapas-horarios" style="display: block;">
+                        <li class="list-li"><a href="assets/anuncios/2024/mapa_parking.jpg" target="_blank"><i class="fa fa-file-image-o"></i>&nbsp;&nbsp;Mapa parking</a></li>
+                        <li class="list-li"><a href="assets/anuncios/2024/mapa_colaboradores.jpg" target="_blank"><i class="fa fa-file-image-o"></i>&nbsp;&nbsp;Mapa locais colaboradores</a></li>
+                        <!--<li class="list-li"><a href="XXXXX" target="_blank"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Mapa</a></li>-->
+                        <!--<li class="list-li"><a href="XXXXX" target="_blank"><i class="fa fa-file-pdf-o"></i>&nbsp;&nbsp;Horarios</a></li>-->
+                    </ul>
 
-                <h4 class="list-header" onclick="displayList(this, 'inscritos')">Lista de inscritos&nbsp;&nbsp;<i class="fa fa-angle-down" style="transition: transform 0.3s; color: #bce519"></i></h4>
-                <ul id="inscritos" style="display: block;">
-                    <li class="list-li"><a href="assets/anuncios/2024/Inscritos_Subida_a_Ponte_Caldelas_Aprobada.pdf" target="_blank"><i class="fa fa-file-pdf-o"></i>&nbsp;&nbsp;Lista de inscritos</a></li>
-                    <li class="list-li"><a href="https://docs.google.com/forms/d/e/1FAIpQLSelei0JG4TEhJypkGcq2SGbH2QRn-DmFZWylxaGyJFGiFkKzg/closedform" target="_blank"><i class="fa fa-file-text-o"></i>&nbsp;&nbsp;[PECHADO] Formulario de inscripción</a></li>
-                    <!--<li class="list-li"><a href="XXXXX" target="_blank"><i class="fa fa-file-pdf-o"></i>&nbsp;&nbsp;Lista de inscritos</a></li>-->
-                </ul>
+                    <h4 class="list-header" onclick="displayList(this, 'inscritos')">Lista de inscritos&nbsp;&nbsp;<i class="fa fa-angle-down" style="transition: transform 0.3s; color: #bce519"></i></h4>
+                    <ul id="inscritos" style="display: block;">
+                        <li class="list-li"><a href="assets/anuncios/2024/Inscritos_Subida_a_Ponte_Caldelas_Aprobada.pdf" target="_blank"><i class="fa fa-file-pdf-o"></i>&nbsp;&nbsp;Lista de inscritos</a></li>
+                        <li class="list-li"><a href="https://docs.google.com/forms/d/e/1FAIpQLSelei0JG4TEhJypkGcq2SGbH2QRn-DmFZWylxaGyJFGiFkKzg/closedform" target="_blank"><i class="fa fa-file-text-o"></i>&nbsp;&nbsp;[PECHADO] Formulario de inscripción</a></li>
+                        <!--<li class="list-li"><a href="XXXXX" target="_blank"><i class="fa fa-file-pdf-o"></i>&nbsp;&nbsp;Lista de inscritos</a></li>-->
+                    </ul>
 
-                <h4 class="list-header" onclick="displayList(this, 'resultados')">Resultados&nbsp;&nbsp;<i class="fa fa-angle-down" style="transition: transform 0.3s; color: #bce519"></i></h4>
-                <ul id="resultados" style="display: block;">
-                    <!--<li class="list-li"><a href="XXXXX" target="_blank"><i class="fa fa-file-pdf-o"></i>&nbsp;&nbsp;Resultados</a></li>-->
-                </ul>
+                    <h4 class="list-header" onclick="displayList(this, 'resultados')">Resultados&nbsp;&nbsp;<i class="fa fa-angle-down" style="transition: transform 0.3s; color: #bce519"></i></h4>
+                    <ul id="resultados" style="display: block;">
+                        <!--<li class="list-li"><a href="XXXXX" target="_blank"><i class="fa fa-file-pdf-o"></i>&nbsp;&nbsp;Resultados</a></li>-->
+                    </ul>
 
-                <h4 class="list-header" onclick="displayList(this, 'doc-reg')">Documentación e regulamentos&nbsp;&nbsp;<i class="fa fa-angle-down" style="transition: transform 0.3s; color: #bce519"></i></h4>
-                <ul id="doc-reg" style="display: block;">
-                    <li class="list-li"><a href="assets/anuncios/2024/reg-part-PONTE-CALDELAS.pdf" target="_blank"><i class="fa fa-file-pdf-o"></i>&nbsp;&nbsp;Regulamento Particular</a></li>
-                    <li class="list-li"><a href="assets/anuncios/2024/declaracion_roupa_2024.pdf" target="_blank"><i class="fa fa-file-pdf-o"></i>&nbsp;&nbsp;Declaración de roupa</a></li>
-                    <li class="list-li"><a href="assets/anuncios/2024/comunicado-trofeos.pdf" target="_blank"><i class="fa fa-file-pdf-o"></i>&nbsp;&nbsp;Comunicado Nº1 - Trofeos</a></li>
-                </ul>
+                    <h4 class="list-header" onclick="displayList(this, 'doc-reg')">Documentación e regulamentos&nbsp;&nbsp;<i class="fa fa-angle-down" style="transition: transform 0.3s; color: #bce519"></i></h4>
+                    <ul id="doc-reg" style="display: block;">
+                        <li class="list-li"><a href="assets/anuncios/2024/reg-part-PONTE-CALDELAS.pdf" target="_blank"><i class="fa fa-file-pdf-o"></i>&nbsp;&nbsp;Regulamento Particular</a></li>
+                        <li class="list-li"><a href="assets/anuncios/2024/declaracion_roupa_2024.pdf" target="_blank"><i class="fa fa-file-pdf-o"></i>&nbsp;&nbsp;Declaración de roupa</a></li>
+                        <li class="list-li"><a href="assets/anuncios/2024/comunicado-trofeos.pdf" target="_blank"><i class="fa fa-file-pdf-o"></i>&nbsp;&nbsp;Comunicado Nº1 - Trofeos</a></li>
+                    </ul>
 
-                <h4 class="list-header" onclick="displayList(this, 'outros')">Outros&nbsp;&nbsp;<i class="fa fa-angle-down" style="transition: transform 0.3s; color: #bce519"></i></h4>
-                <ul id="outros" style="display: block;">
-                    <li class="list-li"><a href="assets/anuncios/2024/cartel_2024.jpg" target="_blank"><i class="fa fa-file-image-o"></i>&nbsp;&nbsp;Cartel 2024</a></li>
-                    <li class="list-li"><a href="assets/anuncios/2024/placa_2024.webp" target="_blank"><i class="fa fa-file-image-o"></i>&nbsp;&nbsp;Placa 2024</a></li>
-                    <li class="list-li"><a href="assets/anuncios/2024/COMPLEMENTO_N1_OFICIALES.pdf" target="_blank"><i class="fa fa-file-pdf-o"></i>&nbsp;&nbsp;Complemento Nº1 - Oficiales</a></li>
-                    <li class="list-li"><a href="assets/anuncios/2024/COMPLEMENTO_N2_RELACIONES.pdf" target="_blank"><i class="fa fa-file-pdf-o"></i>&nbsp;&nbsp;Complemento Nº2 - Relaciones</a></li>
-                    <li class="list-li"><a href="assets/anuncios/2024/COMPLEMENTO_N3_PUBLICIDADES.pdf" target="_blank"><i class="fa fa-file-pdf-o"></i>&nbsp;&nbsp;Complemento Nº3 - Publicidades</a></li>
-                    <li class="list-li"><a href="https://docs.google.com/forms/d/11pOmyjYH8VUanGA8AxJ2JoME0qMk-XubAIHaH5gCLIY/edit" target="_blank"><i class="fa fa-file-text-o"></i>&nbsp;&nbsp;[PECHADO] Solicitude pase de prensa</a></li>
-                    <!--<li class="list-li"><a href="XXXXX" target="_blank"><i class="fa fa-file-image-o"></i>&nbsp;&nbsp;Cartel 2023</a></li>-->
-                </ul>
+                    <h4 class="list-header" onclick="displayList(this, 'outros')">Outros&nbsp;&nbsp;<i class="fa fa-angle-down" style="transition: transform 0.3s; color: #bce519"></i></h4>
+                    <ul id="outros" style="display: block;">
+                        <li class="list-li"><a href="assets/anuncios/2024/cartel_2024.jpg" target="_blank"><i class="fa fa-file-image-o"></i>&nbsp;&nbsp;Cartel 2024</a></li>
+                        <li class="list-li"><a href="assets/anuncios/2024/placa_2024.webp" target="_blank"><i class="fa fa-file-image-o"></i>&nbsp;&nbsp;Placa 2024</a></li>
+                        <li class="list-li"><a href="assets/anuncios/2024/COMPLEMENTO_N1_OFICIALES.pdf" target="_blank"><i class="fa fa-file-pdf-o"></i>&nbsp;&nbsp;Complemento Nº1 - Oficiales</a></li>
+                        <li class="list-li"><a href="assets/anuncios/2024/COMPLEMENTO_N2_RELACIONES.pdf" target="_blank"><i class="fa fa-file-pdf-o"></i>&nbsp;&nbsp;Complemento Nº2 - Relaciones</a></li>
+                        <li class="list-li"><a href="assets/anuncios/2024/COMPLEMENTO_N3_PUBLICIDADES.pdf" target="_blank"><i class="fa fa-file-pdf-o"></i>&nbsp;&nbsp;Complemento Nº3 - Publicidades</a></li>
+                        <li class="list-li"><a href="https://docs.google.com/forms/d/11pOmyjYH8VUanGA8AxJ2JoME0qMk-XubAIHaH5gCLIY/edit" target="_blank"><i class="fa fa-file-text-o"></i>&nbsp;&nbsp;[PECHADO] Solicitude pase de prensa</a></li>
+                        <!--<li class="list-li"><a href="XXXXX" target="_blank"><i class="fa fa-file-image-o"></i>&nbsp;&nbsp;Cartel 2023</a></li>-->
+                    </ul>
 
+                </div>
+            </div>
+            <div class="flex-item-50" style="text-align: center; align-content: center; ">
+                <img id="trazado-img" class="taboleiro-img hide_on_small" src="assets/anuncios/2024/cartel_2024.jpg" alt="">
+                <div style="display: flex; justify-content: center;">
+                    <img id="plaza-img" class="taboleiro-img hide_on_big" src="assets/anuncios/2024/placa_2024.webp" alt="">
+                </div>
             </div>
         </div>
 
