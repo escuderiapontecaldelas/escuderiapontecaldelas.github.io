@@ -45,6 +45,7 @@ html, body {
     font-weight: 400;
     font-size: 1rem;
     background: #181818;
+    overflow-x: hidden; /* Deshabilita el scroll horizontal */
 }
 
 body {
@@ -69,11 +70,6 @@ body {
     user-select: none;
     z-index: 99;
 }
-
-.content {
-    /*min-height: 100vh;*/
-}
-
 
 h1{
     padding: 0;
